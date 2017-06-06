@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('./store')
+const dt = require('datatables.net')
 
 //
 // VIEW INITIALIZERS
@@ -209,6 +210,18 @@ const showUpdate = (data) => {
   $('#update-modal').modal('show')
 }
 
+// const showImage = (data) => {
+//   if ($('#image-modal').length) {
+//   //  replace theexisting modal
+//     replaceView('#image-modal', 'modal-update', {file: data})
+//   } else {
+//    // insert a new alert
+//     appendView('body', 'modal-update', {file: data})
+//   }
+//   // show the hidden modal
+//   $('#image-modal').modal('show')
+// }
+
 const showFiles = (files) => {
   // first, let's alphabetize the files
   files.sort(function (a, b) {
@@ -231,6 +244,7 @@ const showFiles = (files) => {
   })
 
   renderView('.content-div', 'files', {data: {files: files, userID: store.user.id}})
+  $('#table-view').DataTable()
 }
 
 const showConfirmDelete = (id) => {
