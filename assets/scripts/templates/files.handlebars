@@ -12,7 +12,7 @@
         <strong class="menu">Modified</strong>
       </th>
       <!-- <th class="file-item file-date col-sm-2 col-xs-2">
-        <strong class="menu">Owner</strong>
+        <strong class="menu">Modified</strong>
       </th> -->
       <th class="col-sm-2 col-xs-2">
       </th>
@@ -27,6 +27,7 @@
       </td>
       <td class="file-date file-date-created col-sm-2 hidden-xs">{{file.createdAt}}</td>
       <td class="file-date file-date-modified col-sm-2 col-xs-2">{{file.updatedAt}}</td>
+      <!-- <td class="file-date file-date-modified col-sm-2 col-xs-2">{{file.email}}</td> -->
       <td class="col-sm-2 col-xs-2 text-right">
         {{#isOwner owner user=../data.userID owner=file._owner}}
           <div class="btn-group">
