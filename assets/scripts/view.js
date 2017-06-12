@@ -30,6 +30,12 @@ const renderView = (element, hbsFile, params) => {
   const template = require(`./templates/${hbsFile}.handlebars`)
   const content = template(params)
   $(element).html(content)
+  $('#myTable').DataTable({
+    autoFill: true
+  })
+  $('#myTable').DataTable({
+    responsive: true
+  })
 }
 
 // replaceView(element, hbsFile, params)
